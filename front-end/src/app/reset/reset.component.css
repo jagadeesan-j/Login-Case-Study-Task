@@ -1,0 +1,27 @@
+.main{
+    background-color: bisque;
+    text-align: center;
+    margin: 25vh;
+    padding: 3vh;
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+h1{
+    color: red;
+}
+label{
+    color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+:placeholder-shown{
+    color: rgb(123, 8, 223);
+}
+::placeholder{
+    color: brown;
+}
+input{
+    border-color: rgb(9, 198, 211);
+}
+button{
+    color: rgb(41, 119, 93);
+}

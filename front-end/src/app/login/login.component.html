@@ -1,14 +1,25 @@
-<h5><u><i>Login Form</i></u></h5>
-<form class="example-form">
-	<mat-form-field class="example-full-width" appearance="fill">
-		<mat-label>User Name</mat-label>
-		<input matInput placeholder="Enter your name" name="usename" [(ngModel)]="username">
-	</mat-form-field>
-	<mat-form-field class="example-full-width" appearance="fill">
-		<mat-label>Password</mat-label>
-		<input matInput placeholder="Enter your password" value="" name="password" type="password"
-			[(ngModel)]="password">
-	</mat-form-field>
-	<button mat-raised-button color="primary" (click)="submit()">Submit</button>
-	<span *ngIf="show"> <button mat-button color="accent">Login success !!</button></span>
-</form>
+<div class="main">
+    <h1>LOGIN</h1>
+    <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+        <div class="div1">
+            <label for="username" class="label">Username</label>
+            <br>
+            <input ngModel id="input-text" type="text" name="username" #username="ngModel" placeholder="Enter Username"/></div>
+      <br>
+      <div class="div2">
+        <label for="password" class="label">Password</label>
+        <br>
+        <input id="input-text"  ngModel type="password" name="password" required #password="ngModel" placeholder="Enter Password"/></div>
+        <br>
+      <div class="btn-div">
+        <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">
+          Login
+        </button>
+    </div>
+    <br>
+    <div>
+        <a routerLink="/reset" style="color: rgba(255, 255, 255, 0.664);">Forgot Password? Reset here</a>
+      </div>
+    </form>
+  </div>
+  

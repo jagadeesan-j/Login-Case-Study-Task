@@ -1,0 +1,22 @@
+<div class="page">
+    <div class="main">
+      <h1>Forgot Password</h1>
+      <form #SaveForm="ngForm" (ngSubmit)="onSave(SaveForm)">
+          <div class="div1">
+            <label for="username" class="label">Username</label>
+            <br>
+            <input ngModel id="input-text" type="text" name="username" #username="ngModel" placeholder="Enter Username"/></div>
+        <br>
+        <div class="div2">
+          <label for="password" class="label">Password</label>
+          <br>
+          <input id="input-text"  ngModel type="password" name="password" required #password="ngModel" placeholder="Enter Password"/></div>
+        <br> 
+        <div class="btn-div">
+          <button type="submit" [disabled]="!SaveForm.valid" class="login-btn">
+            Reset Password
+          </button>
+      </div>
+      </form>
+    </div>
+  </div>
